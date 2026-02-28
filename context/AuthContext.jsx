@@ -5,7 +5,7 @@ import { io } from "socket.io-client";
 
 export const AuthContext = createContext();
 
-const backendUrl = "http://localhost:5000"; // change if needed
+const backendUrl = "https://chat-app-backend-bjz1.onrender.com"; // change if needed
 axios.defaults.baseURL = backendUrl;
 
 export const AuthProvider = ({ children }) => {
