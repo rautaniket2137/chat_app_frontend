@@ -8,6 +8,7 @@ import { ProfilePage } from "./pages/ProfilePage";
 import {Toaster} from "react-hot-toast"
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import assets from "../public/assets/assets";
 const App = () => {
   const { authUser, loading } = useContext(AuthContext);
 
@@ -20,7 +21,7 @@ const App = () => {
   }
 
   return (
-    <div className="bg-[url('./public/assets/bgImage.svg')] bg-contain">
+    <div className="bg-[url('./public/assets/assets/bgImage.svg')] bg-contain">
       <Toaster />
       <Routes>
         <Route
