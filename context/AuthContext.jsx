@@ -15,20 +15,7 @@ export const AuthProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // ✅ Check Authentication
-  // const checkAuth = async () => {
-  //   try {
-  //     const { data } = await axios.get("/api/auth/check");
-
-  //     if (data.success) {
-  //       setAuthUser(data.user);
-  //       connectSocket(data.user);
-  //     }
-  //   } catch (error) {
-  //     toast.error(error.message);
-  //   }
-  // };
-
+  
   const checkAuth = async () => {
     try {
       const { data } = await axios.get("/api/auth/check");
