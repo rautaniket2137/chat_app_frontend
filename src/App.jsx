@@ -1,14 +1,12 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 // import HomePage from "./pages/HomePage";
 import HomePage from "./pages/HomePage"; // ✅ correct
-
-
 import Loginpage from "./pages/Loginpage";
 import { ProfilePage } from "./pages/ProfilePage";
 import {Toaster} from "react-hot-toast"
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
-import assets from "../public/assets/assets";
+
 const App = () => {
   const { authUser, loading } = useContext(AuthContext);
 
@@ -21,7 +19,7 @@ const App = () => {
   }
 
   return (
-    <div className="bg-[url('/assets/bgImage.svg')] bg-contain">
+    <div className="bg-[url('/bgImage.svg')] bg-contain">
       <Toaster />
       <Routes>
         <Route
