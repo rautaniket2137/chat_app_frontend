@@ -21,7 +21,7 @@ const App = () => {
   }
 
   return (
-    <div className="bg-[url('client\public\assets\bgImage.svg')] bg-contain">
+    <div className="bg-[url('/assets/bgImage.svg')] bg-contain">
       <Toaster />
       <Routes>
         <Route
