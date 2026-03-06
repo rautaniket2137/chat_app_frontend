@@ -13,7 +13,11 @@ const App = () => {
   if (loading) {
     return (
       <div className="h-screen flex items-center justify-center">
-        Loading...
+       
+    <div className="w-5 h-5 rounded-full animate-pulse bg-blue-600"></div>
+    <div className="w-5 h-5 rounded-full animate-pulse bg-blue-600"></div>
+    <div className="w-5 h-5 rounded-full animate-pulse bg-blue-600"></div>
+
       </div>
     );
   }

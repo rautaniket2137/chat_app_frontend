@@ -15,8 +15,7 @@ export const AuthProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  
-  const checkAuth = async () => {
+const checkAuth = async () => {
     try {
       const { data } = await axios.get("/api/auth/check");
 
@@ -110,6 +109,8 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
+
+
   const value = {
     axios,
     authUser,
@@ -123,3 +124,4 @@ export const AuthProvider = ({ children }) => {
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
+

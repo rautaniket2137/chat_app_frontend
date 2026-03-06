@@ -19,11 +19,19 @@ export const Sidebar = () => {
   const [input, setInput] = useState("");
   const navigate = useNavigate();
 
+
+
+
   const filteredUsers = input
     ? users.filter((user) =>
         user.fullName.toLowerCase().includes(input.toLowerCase()),
       )
     : users;
+
+
+  const onClick = (e)=>{
+  e.preventDefault();
+  }
 
   useEffect(() => {
     getUsers();
@@ -48,13 +56,13 @@ export const Sidebar = () => {
 
             <div className="absolute top-full right-0 z-20 w-32 p-5 rounded-md bg-[#282142] border border-gray-600 text-gray-100 hidden group-hover:block">
               <p
-                onClick={() => navigate("/profile")}
+                onClick={() =>onClick = navigate("/profile")}
                 className="cursor-pointer text-sm"
               >
                 Edit profile
               </p>
               <hr className="my-2 border-t border-gray-500" />
-              <p onClick={() => logout()} className="cursor-pointer text-sm">
+              <p onClick={() => logout()} className="cursor-pointer text-sm  hover:text-blue-400">
                 Logout
               </p>
             </div>

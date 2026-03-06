@@ -48,7 +48,7 @@ export const ProfilePage = () => {
               onChange={(e) => setSelectedImg(e.target.files[0])}
               type="file"
               id="avatar"
-              accept=".png,.jpg,.jprg "
+              accept=".png,.jpg,.jpeg "
               hidden
             />
             <img
