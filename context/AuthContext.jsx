@@ -42,6 +42,7 @@ const checkAuth = async () => {
         connectSocket(data.userData);
 
         axios.defaults.headers.common["token"] = data.token;
+       
         setToken(data.token);
         localStorage.setItem("token", data.token);
 
@@ -103,6 +104,7 @@ const checkAuth = async () => {
   useEffect(() => {
     if (token) {
       axios.defaults.headers.common["token"] = token;
+    
       checkAuth();
     } else {
       setLoading(false); // new line adding

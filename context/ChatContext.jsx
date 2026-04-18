@@ -75,7 +75,7 @@ export const ChatProvider = ({ children }) => {
     });
   };
 
-  //unsubcrib
+  // Unsubscribe from socket
 
   const unsubscribeFromMessages = () => {
     if (socket) socket.off("newMessage");

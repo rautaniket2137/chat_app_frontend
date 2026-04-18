@@ -17,6 +17,7 @@ export const Sidebar = () => {
   const { logout, onlineUsers } = useContext(AuthContext);
 
   const [input, setInput] = useState("");
+  const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
 
@@ -47,16 +48,24 @@ export const Sidebar = () => {
         <div className="flex justify-between items-center">
           <img src={assets.logo} alt="logo" className="max-w-40" />
 
-          <div className="relative py-2 group">
-            <img
+          <div className="relative py-2 group ">
+            
+            {/* <img
               src={assets.menu_icon}
               alt="Menu"
-              className="max-h-5 cursor-pointer"
-            />
+             
+              className="max-h-5 cursor-pointer "
+            /> */}
 
+            <img
+                src={assets.menu_icon}
+            className="max-h-5 cursor-pointer"
+              onClick={() => setOpen(!open)}
+                      />
+{open && (
             <div className="absolute top-full right-0 z-20 w-32 p-5 rounded-md bg-[#282142] border border-gray-600 text-gray-100 hidden group-hover:block">
               <p
-                onClick={() =>onClick = navigate("/profile")}
+                onClick={() => navigate("/profile")}
                 className="cursor-pointer text-sm"
               >
                 Edit profile
@@ -66,6 +75,7 @@ export const Sidebar = () => {
                 Logout
               </p>
             </div>
+            )}
           </div>
         </div>
 

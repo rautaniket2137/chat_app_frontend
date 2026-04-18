@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import assets from "../../public/assets/assets";
 import { AuthContext } from "../../context/AuthContext";
-import {  ArrowRight, Loader } from "lucide-react";
+
 
 const Loginpage = () => {
   const [currState, setCurrState] = useState("Sign up");
