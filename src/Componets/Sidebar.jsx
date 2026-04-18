@@ -58,11 +58,11 @@ export const Sidebar = () => {
             /> */}
 
             <img
-                src={assets.menu_icon}
-            className="max-h-5 cursor-pointer"
-              onClick={() => setOpen(!open)}
-                      />
-{open && (
+  src={assets.menu_icon}
+  className="max-h-5 cursor-pointer"
+  onClick={() => setOpen(!open)}
+/>
+{/* {open && (
             <div className="absolute top-full right-0 z-20 w-32 p-5 rounded-md bg-[#282142] border border-gray-600 text-gray-100 ">
               <p
                 onClick={() => navigate("/profile")}
@@ -75,7 +75,35 @@ export const Sidebar = () => {
                 Logout
               </p>
             </div>
-            )}
+            )} */}
+
+            {open && (
+  <div className="absolute top-full right-0 z-50 w-32 p-5 rounded-md bg-[#282142] border border-gray-600 text-gray-100">
+    
+    <p
+      onClick={() => {
+        navigate("/profile");
+        setOpen(false);
+      }}
+      className="cursor-pointer text-sm"
+    >
+      Edit profile
+    </p>
+
+    <hr className="my-2 border-t border-gray-500" />
+
+    <p
+      onClick={() => {
+        logout();
+        setOpen(false);
+      }}
+      className="cursor-pointer text-sm hover:text-blue-400"
+    >
+      Logout
+    </p>
+    
+  </div>
+)}
           </div>
         </div>
 
